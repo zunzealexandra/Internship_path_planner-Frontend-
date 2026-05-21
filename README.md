@@ -1,43 +1,70 @@
-## Internship Path Planner
+# Getting Started with Create React App
 
-Full-stack demo: Django backend + React frontend. Uses an A* search to map internship transitions toward a target role using the provided `internships.csv` dataset.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Requirements
-- Python 3.10+ with `pip`
-- Node 18+ with `npm`
-- OS: tested on Windows 10
+## Available Scripts
 
-### Backend setup (Django)
-From the repo root:
-1) Install deps  
-   `pip install -r backend/requirements.txt`
-2) Apply migrations  
-   `python backend/manage.py migrate`
-3) Load the dataset (uses `internships.csv` in the repo root)  
-   `python backend/manage.py load_internships`
-4) Run the server (defaults to port 8000)  
-   `python backend/manage.py runserver`
+In the project directory, you can run:
 
-### Frontend setup (React)
-1) Install deps  
-   `cd frontend && npm install`
-2) Start the dev server (defaults to port 3000)  
-   `npm start`
-3) (Optional) Point the UI to a different API base: set `REACT_APP_API_URL`, e.g. `http://localhost:8000/api`.
+### `npm start`
 
-### API quick reference
-- `POST /api/path/`  
-  Body: `{ "skills": ["python", "sql"], "target_role": "data scientist intern", "location": "new york" }`  
-  Returns: A* selected path with cost breakdown and skill accrual.
-- `GET /api/internships/` (optional `?location=` filter)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Notes
-- Default DB is SQLite at `backend/db.sqlite3`.
-- Admin is enabled; you can create a superuser if needed: `python backend/manage.py createsuperuser`.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
